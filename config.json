@@ -1,5 +1,13 @@
 {
     "restaurant": {
         "name": "Mc Domas"
-    }
+    },
+    "dishes": [
+        { 
+            "title": "Pedrab",
+            "ingredients": [
+                "coleslaw"
+            ]
+         }
+    ]
 }

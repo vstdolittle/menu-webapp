@@ -5,7 +5,15 @@ import Menu from './Menu';
 const MENU_WEBAPP_CONFIG = {
   restaurant: {
       name: "Mc Domas"
-  }
+  },
+  dishes: [
+    { 
+        title: "Pedrab",
+        ingredients : [
+            "coleslaw"
+        ]
+     }
+  ]
 };
 
 
