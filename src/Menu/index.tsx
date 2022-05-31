@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import { MenuConfig } from './models/MenuConfig';
 
 interface MenuProps {
@@ -10,7 +9,7 @@ function Menu(props: MenuProps) {
   return (
     <div className="App">
       <header className="App-header">
-        {props.config.name}
+        {props.config.restaurant.name}
       </header>
     </div>
   );
