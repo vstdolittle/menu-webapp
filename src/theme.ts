@@ -10,7 +10,7 @@ export const theme = createTheme({
         },
         secondary: {
             main:'#7b9993',
-            light: '#646464'
+            light: '#9cc88d'
         }
     },
     spacing: [0,2,4,8,16,32,64, 128, 256],
@@ -48,7 +48,7 @@ export const theme = createTheme({
         h4: {
            fontWeight: 'bolder',
            fontSize: 18,
-           color: '#646464' 
+           color: '#ffffff' 
         },
         button: {
           fontStyle: 'bold',

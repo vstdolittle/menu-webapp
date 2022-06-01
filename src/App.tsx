@@ -1,5 +1,7 @@
+import { ThemeProvider } from '@emotion/react';
 import React from 'react';
 import Menu from './Menu';
+import { theme }  from './theme';
 
 const MENU_WEBAPP_CONFIG = {
   restaurant: {
@@ -18,7 +20,9 @@ const MENU_WEBAPP_CONFIG = {
 
 function App() {
   return (
-    <Menu config={MENU_WEBAPP_CONFIG}/>
+    <ThemeProvider theme={theme}>
+      <Menu config={MENU_WEBAPP_CONFIG}/>
+    </ThemeProvider>
   );
 }
 
