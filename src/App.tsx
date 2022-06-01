@@ -9,11 +9,35 @@ const MENU_WEBAPP_CONFIG = {
   },
   dishes: [
     { 
-        title: "Pedrab",
-        ingredients : [
-            "coleslaw"
-        ]
-     }
+      "title": "Pedrab",
+      "ingredients": [
+          "coleslaw"
+      ]
+   },
+  { 
+      "title": "Hamburger",
+      "ingredients": [
+          "fries",
+          "salad",
+          "buns"
+      ]
+   },
+  { 
+      "title": "Hot dogs",
+      "ingredients": [
+          "dogs",
+          "heat"
+      ]
+   },
+  { 
+      "title": "Soup",
+      "ingredients": [
+          "water",
+          "cream",
+          "bread",
+          "butter"
+      ]
+   },
   ]
 };
 

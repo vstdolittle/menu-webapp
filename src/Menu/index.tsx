@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { Box, Grid, Typography } from '@mui/material';
 import { Dish, MenuConfig } from './models/MenuConfig';
-import { MenuItemCard } from './components/MenuItem';
+import { MenuItemCard } from './components/MenuItemCard';
 interface MenuProps {
     config: MenuConfig
 }
@@ -31,10 +31,9 @@ const UserMenu: FC<UserMenuProps> = ({ dishes }) => {
   }
   return (
     <Box sx={{ display: 'grid', gridTemplateRows: `repeat(${dishes.length + 3}, 1fr)`, width: '100%' }}>
-      { dishes.map((d: Dish) => <MenuItemCard dish={d}/>) }
+      { dishes.map((d: Dish, idx: number) => <MenuItemCard dish={d} key={idx}/>) }
     </Box>
   );
 }
 
 export default Menu;
-

@@ -28,7 +28,7 @@ export const theme = createTheme({
             color: '#174E42'
         },
         body2: {
-          fontSize: 16,
+          fontSize: 12,
           color: '#646464'
         },
         h1: {

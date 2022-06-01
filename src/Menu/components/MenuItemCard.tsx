@@ -8,6 +8,14 @@ interface MenuItemCardProps {
 }
 
 export const MenuItemCard: FC<MenuItemCardProps> = ({ dish }) => {
+    const ingredients = () => {
+      let displayStr = `included: `;
+      dish.ingredients.forEach((ingredient: string, idx: number)=> {
+        displayStr += `${idx === dish.ingredients.length -1 ? `${ingredient}` :`${ingredient}, ` }`
+      })
+
+      return displayStr;
+    }
     return (
         <Grid 
           container
@@ -18,12 +26,14 @@ export const MenuItemCard: FC<MenuItemCardProps> = ({ dish }) => {
             border: '1px solid',
             borderColor: (theme) => (theme.palette.secondary.light),
             borderRadius: '25px',
+            marginBottom: 6,
+            marginTop: 3
             }}
           >
           <Grid item xs={9}>
             <Stack direction={"column"}>
               <Typography variant={"h4"}>{dish.title}</Typography>
-              <Typography variant={"body2"}>{dish.ingredients}</Typography>
+              <Typography variant={"body2"}>{ingredients()}</Typography>
             </Stack>
            </Grid>
           <Grid item xs={3} sx={{ display: 'flex', flexDirection: 'column' }}>
