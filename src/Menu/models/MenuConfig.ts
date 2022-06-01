@@ -5,17 +5,7 @@ export type MenuConfig = {
     dishes: Dish[]
 }
 
-export class Dish {
-
+export type Dish = {
     title: string;
     ingredients: string[];
-    //picture
-    //AdditionOptions: 
-
-
-    constructor(title: string, ingredients: string[]) {
-        this.title = title;
-        this.ingredients = ingredients
-    }
-
 }
