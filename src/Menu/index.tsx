@@ -6,23 +6,21 @@ interface MenuProps {
     config: MenuConfig
 }
 
-function Menu(props: MenuProps) {
+const Menu: FC<MenuProps> = ({ config }) => {
   return (
-    <div className="App">
       <Grid 
           container
           direction={'column'}
           padding={4}
         >
-        <Typography variant={"h2"} sx={{marginBottom: 6}}>Welcome to {props.config.restaurant.name}</Typography>
-        <UserMenu dishes={props.config.dishes} />
+        <Typography variant={"h2"} sx={{marginBottom: 6}}>Welcome to {config.restaurant.name}</Typography>
+        <UserMenu dishes={config.dishes} />
       </Grid>
-    </div>
   );
 }
 
 
-type UserMenuProps = {
+interface UserMenuProps {
   dishes: Dish[];
 };
 const UserMenu: FC<UserMenuProps> = ({ dishes }) => {

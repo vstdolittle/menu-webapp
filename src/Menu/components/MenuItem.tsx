@@ -3,7 +3,7 @@ import { FC } from "react";
 import { Dish } from "../models/MenuConfig";
 import AddIcon from '@mui/icons-material/Add';
 
-export interface MenuItemCardProps {
+interface MenuItemCardProps {
     dish: Dish;
 }
 
