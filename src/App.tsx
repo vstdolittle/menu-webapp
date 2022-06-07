@@ -5,7 +5,7 @@ import { theme }  from './theme';
 
 const MENU_WEBAPP_CONFIG = {
   restaurant: {
-      name: "Mc Domas"
+      name: "Burger Kingunn"
   },
   dishes: [
     { 

@@ -2,6 +2,8 @@ import { Grid, Stack, Typography, IconButton } from "@mui/material";
 import { FC } from "react";
 import { Dish } from "../models/MenuConfig";
 import AddIcon from '@mui/icons-material/Add';
+import { increment } from "../../counterSlice";
+import { useAppDispatch } from "../hooks/useAppDispatch";
 
 interface MenuItemCardProps {
     dish: Dish;
@@ -16,6 +18,8 @@ export const MenuItemCard: FC<MenuItemCardProps> = ({ dish }) => {
 
       return displayStr;
     }
+
+    const dispatch = useAppDispatch();
     return (
         <Grid 
           container
@@ -46,7 +50,8 @@ export const MenuItemCard: FC<MenuItemCardProps> = ({ dish }) => {
                 marginBottom:"0.5em",
                 alignSelf: "flex-end",
                 backgroundColor: (theme) => (theme.palette.secondary.main),
-              }}>
+              }}
+              onClick={()=> dispatch(increment())}>
               <AddIcon
                sx={{ 
                 width:"1em",

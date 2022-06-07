@@ -1,8 +1,7 @@
 import React, { FC } from 'react';
-import { Box, Grid, IconButton, Typography } from '@mui/material';
+import { Box, Grid, Typography } from '@mui/material';
 import { Dish, MenuConfig } from './models/MenuConfig';
 import { MenuItemCard } from './components/MenuItemCard';
-import { ShoppingBasket } from '@mui/icons-material';
 import BasketHeader from './components/BasketHeader';
 interface MenuProps {
     config: MenuConfig
@@ -16,7 +15,7 @@ const Menu: FC<MenuProps> = ({ config }) => {
           padding={4}
         >
         <Typography variant={"h2"} sx={{marginBottom: 6}}>Welcome to {config.restaurant.name}</Typography>
-        <BasketHeader items={0}/>
+        <BasketHeader/>
         <UserMenu dishes={config.dishes} />
       </Grid>
   );

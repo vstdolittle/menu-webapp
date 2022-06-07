@@ -4,12 +4,12 @@ import Grid from '@mui/material/Grid';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import React, { FC } from 'react';
+import { useAppSelector } from '../hooks/useAppDispatch';
 
-interface BasketHeaderProps {
-    items: number;
-}
 
-const BasketHeader: FC<BasketHeaderProps> = ({ items }) => {
+const BasketHeader: FC = () => {
+  const count = useAppSelector((state) => state.counter.value); //todo. add selector here
+  
     return (
         <Grid 
             container
@@ -24,7 +24,7 @@ const BasketHeader: FC<BasketHeaderProps> = ({ items }) => {
                 borderRadius: '1px',
             }}
           >
-          <Typography variant="body2" sx={{alignSelf: "center", padding: 5}}>{items} items selected</Typography>
+          <Typography variant="body2" sx={{alignSelf: "center", padding: 5}}>{count} items selected</Typography>
           <IconButton
                 color="primary"
                 sx={{
