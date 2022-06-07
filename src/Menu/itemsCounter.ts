@@ -14,7 +14,9 @@ const itemsCount = createSlice({
       state.value++
     },
     decrement(state) {
-      state.value--
+      if(state.value > 0){
+        state.value--
+      }
     },
     incrementByAmount(state, action: PayloadAction<number>) {
       state.value += action.payload

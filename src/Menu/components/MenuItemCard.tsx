@@ -2,8 +2,9 @@ import { Grid, Stack, Typography, IconButton } from "@mui/material";
 import { FC } from "react";
 import { Dish } from "../models/MenuConfig";
 import AddIcon from '@mui/icons-material/Add';
-import { increment } from "../../counterSlice";
-import { useAppDispatch } from "../hooks/useAppDispatch";
+import RemoveIcon from '@mui/icons-material/Remove';
+import { increment, decrement } from "../itemsCounter";
+import { useAppDispatch } from "../../hooks/useAppDispatch";
 
 interface MenuItemCardProps {
     dish: Dish;
@@ -53,6 +54,23 @@ export const MenuItemCard: FC<MenuItemCardProps> = ({ dish }) => {
               }}
               onClick={()=> dispatch(increment())}>
               <AddIcon
+               sx={{ 
+                width:"1em",
+                height:"1em",
+              }}/>
+            </IconButton>
+            <IconButton
+              color="primary"
+              sx={{
+                width:"2em",
+                height:"2em",
+                marginRight: "1em",
+                marginBottom:"0.5em",
+                alignSelf: "flex-end",
+                backgroundColor: (theme) => (theme.palette.secondary.main),
+              }}
+              onClick={()=> dispatch(decrement())}>
+              <RemoveIcon
                sx={{ 
                 width:"1em",
                 height:"1em",
