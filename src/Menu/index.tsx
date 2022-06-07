@@ -1,8 +1,9 @@
 import React, { FC } from 'react';
 import { Box, Grid, Typography } from '@mui/material';
-import { Dish, MenuConfig } from './models/MenuConfig';
+import { MenuConfig } from './models/MenuConfig';
 import { MenuItemCard } from './components/MenuItemCard';
 import BasketHeader from './components/BasketHeader';
+import { Dish } from './models/Dish';
 interface MenuProps {
     config: MenuConfig
 }

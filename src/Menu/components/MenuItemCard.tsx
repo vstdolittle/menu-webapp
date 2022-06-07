@@ -1,10 +1,10 @@
 import { Grid, Stack, Typography, IconButton } from "@mui/material";
 import { FC } from "react";
-import { Dish } from "../models/MenuConfig";
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
-import { increment, decrement } from "../itemsCounter";
 import { useAppDispatch } from "../../hooks/useAppDispatch";
+import { Dish } from "../models/Dish";
+import { addToBasket, removeFromBasket } from "../redux/slices/basket";
 
 interface MenuItemCardProps {
     dish: Dish;
@@ -52,7 +52,7 @@ export const MenuItemCard: FC<MenuItemCardProps> = ({ dish }) => {
                 alignSelf: "flex-end",
                 backgroundColor: (theme) => (theme.palette.secondary.main),
               }}
-              onClick={()=> dispatch(increment())}>
+              onClick={()=> dispatch(addToBasket(dish.title))}>
               <AddIcon
                sx={{ 
                 width:"1em",
@@ -69,7 +69,7 @@ export const MenuItemCard: FC<MenuItemCardProps> = ({ dish }) => {
                 alignSelf: "flex-end",
                 backgroundColor: (theme) => (theme.palette.secondary.main),
               }}
-              onClick={()=> dispatch(decrement())}>
+              onClick={()=> dispatch(removeFromBasket(dish.title))}>
               <RemoveIcon
                sx={{ 
                 width:"1em",

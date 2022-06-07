@@ -8,7 +8,7 @@ import { useAppSelector } from '../../hooks/useAppSelector';
 
 
 const BasketHeader: FC = () => {
-  const count = useAppSelector((state) => state.itemsCount.value);
+  const count = useAppSelector((state) => state.basket.itemsCount);
   
     return (
         <Grid 
