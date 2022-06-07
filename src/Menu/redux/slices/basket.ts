@@ -41,15 +41,16 @@ const basket = createSlice({
 
       if(!item) return;
 
+      if(item.count === 1) {
+        delete state.items[action.payload];
+        state.itemsCount--;
+      }
+      
       if(item.count > 1) {
         item.count--;
-        state.itemsCount++;
+        state.itemsCount--;
       }
 
-      if(item.count <= 1) {
-        delete state.items[action.payload];
-        state.itemsCount++;
-      }
 
     },
   },
