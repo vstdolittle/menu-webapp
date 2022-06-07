@@ -6,8 +6,8 @@ interface CounterState {
 
 const initialState = { value: 0 } as CounterState
 
-const counterSlice = createSlice({
-  name: 'counter',
+const itemsCount = createSlice({
+  name: 'itemsCount',
   initialState,
   reducers: {
     increment(state) {
@@ -22,5 +22,5 @@ const counterSlice = createSlice({
   },
 })
 
-export const { increment, decrement, incrementByAmount } = counterSlice.actions
-export default counterSlice.reducer
+export const { increment, decrement, incrementByAmount } = itemsCount.actions
+export default itemsCount.reducer

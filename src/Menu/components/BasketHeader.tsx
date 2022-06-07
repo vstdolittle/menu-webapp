@@ -4,11 +4,11 @@ import Grid from '@mui/material/Grid';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import React, { FC } from 'react';
-import { useAppSelector } from '../hooks/useAppDispatch';
+import { useAppSelector } from '../hooks/useAppSelector';
 
 
 const BasketHeader: FC = () => {
-  const count = useAppSelector((state) => state.counter.value); //todo. add selector here
+  const count = useAppSelector((state) => state.itemsCount.value);
   
     return (
         <Grid 
