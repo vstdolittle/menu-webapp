@@ -1,5 +1,6 @@
 
 import { ShoppingBasket } from '@mui/icons-material';
+import { Button } from '@mui/material';
 import Grid from '@mui/material/Grid';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
@@ -26,22 +27,22 @@ const BasketHeader: FC = () => {
           >
           <Typography variant="body2" sx={{alignSelf: "center", padding: 5}}>{count} items selected</Typography>
           <IconButton
-                color="primary"
-                sx={{
-                  width:"2em",
-                  height:"2em",
-                  marginRight: "0.5em",
-                  marginBottom:"0.5em",
-                  alignSelf: "flex-end",
-                  alignContent: "flex-end",
-                  backgroundColor: (theme) => (theme.palette.secondary.main),
-                }}>
-                <ShoppingBasket
-                 sx={{ 
-                  width:"1em",
-                  height:"1em",
-                }}/>
-              </IconButton>
+            color="primary"
+            sx={{
+              width:"3em",
+              height:"3em",
+              marginRight: "0.5em",
+              marginBottom:"0.5em",
+              alignSelf: "flex-end",
+              alignContent: "flex-end",
+            }}>
+            <ShoppingBasket
+              sx={{ 
+              width:"1em",
+              height:"1em",
+            }}/>
+            <Typography variant="body2" sx={{}}>next</Typography>
+          </IconButton>
         </Grid>
     );
   }
